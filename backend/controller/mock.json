@@ -1,0 +1,14 @@
+{
+  "A":{
+    "id":"personA",
+    "distance":50,
+    "startTime":1595406630303,
+    "endTime":1595428230303
+  },
+  "B":{
+    "id":"personB",
+    "distance":20,
+    "startTime":1595406630303,
+    "endTime":1595428230303
+  }
+}

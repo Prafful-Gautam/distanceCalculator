@@ -1,0 +1,39 @@
+<div class="mt-5"></div>
+<form (submit)="onSubmit(form)" #form = "ngForm">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+        <div class="form-group">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Person Id</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" ngModel name="personId">
+              <option selected>Choose...</option>
+              <option *ngFor="let id of person" value={{id.id}}>{{id.id}}</option>
+
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Start Time</label>
+        <timepicker [(ngModel)]="startTime" [minuteStep]="mstep" name="StartTime"></timepicker>
+      <pre class="alert alert-info">Time is: {{startTime}}</pre>
+      </div>
+      <div class="form-group">
+        <label>End Time</label>
+      <timepicker [(ngModel)]="endTime" [minuteStep]="mstep" name="EndTime"></timepicker>
+      <pre class="alert alert-info">Time is: {{endTime}}</pre>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <p></p>
+
+      <p>Distance Travelled in Km : <b>{{distance}} Km</b></p>
+    </div>
+
+    </div>
+
+</form>
+
+
